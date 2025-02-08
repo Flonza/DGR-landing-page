@@ -35,7 +35,7 @@ export default function AboutUs() {
     return (
         <>
             <article>
-                <section className="bg-[var(--deep-black)] w-full mb-8 flex justify-center px-4 md:pt-32 max-md:pt-8">
+                <section className="bg-[var(--deep-black)] w-full mb-8 flex justify-center px-4 md:pt-24 max-md:pt-8">
                     <div className="max-w-screen-xl w-full flex flex-col md:flex-row py-6 gap-6 md:gap-12">
                         <div className="hidden md:flex w-1/4 justify-center items-center">
                             <img

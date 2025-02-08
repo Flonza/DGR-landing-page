@@ -3,17 +3,16 @@ import React, { useState, useEffect } from 'react';
 import useDetectScroll from '@smakss/react-scroll-direction';
 
 export function NavBar() {
-    const [isScrollingDown, setIsScrollingDown] = useState(false);
+    const [isScrollingDown, setIsScrollingDown] = useState(true);
     const { scrollDir } = useDetectScroll();
 
     useEffect(() => {
-
-        if (scrollDir == 'up') {
-            setIsScrollingDown(true)
-        } else {
-            setIsScrollingDown(false)
+        if (scrollDir === 'down') {
+            setIsScrollingDown(false);
+        } else if (scrollDir === 'up') {
+            setIsScrollingDown(true); 
         }
-    }, [scrollDir])
+    }, [scrollDir]);
 
     const classVal = isScrollingDown ? 'devuelta' : 'escondido';
 
@@ -31,7 +30,7 @@ export function NavBar() {
 
     return (
         <>
-            <nav className={`min-h-10 nav-menu sticky-menu ${classVal}`}>
+            <nav className={`min-h-10 nav-menu sticky-menu ${classVal}` }>
                 {/* ICONO  */}
 
 
