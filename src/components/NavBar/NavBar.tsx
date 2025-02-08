@@ -1,22 +1,12 @@
 import './NavBar.scss';
 import React, { useState, useEffect } from 'react';
 import useDetectScroll from '@smakss/react-scroll-direction';
-import Logo from '/Company/Logo.webp'
-import { TerminalIcon } from 'lucide-react';
-
 
 export function NavBar() {
     const [isScrollingDown, setIsScrollingDown] = useState(false);
     const { scrollDir } = useDetectScroll();
-    // const { isScrolling } = useScrollDirection()
 
     useEffect(() => {
-
-        // if(!isScrolling) {
-        //     setTimeout(() => {
-        //         setIsScrollingDown(true)
-        //     }, 1000);
-        // }
 
         if (scrollDir == 'up') {
             setIsScrollingDown(true)
@@ -59,7 +49,7 @@ export function NavBar() {
                         <li><a href="#ourServices" className="block py-2">Nuestros servicios</a></li>
                         <li><a href="#ourJobs" className="block py-2">Trabajos realizados</a></li>
                         <li>
-                            <img src={Logo} alt="" className="w-36 h-auto" />
+                            <img src='/Company/Logo.webp' alt="Logo" className="w-36 h-auto" />
                         </li>
                     </ul>
                 </div>
@@ -68,7 +58,7 @@ export function NavBar() {
 
                 <div className="md:flex items-center h-20 justify-around w-full hidden">
                     <div>
-                        <img src={Logo} alt="Logo" className="w-36 h-auto" />
+                        <img src='/Company/Logo.webp' alt="Logo" className="w-36 h-auto" />
                     </div>
                     <div>
                         <ul className="flex gap-6">
