@@ -1,0 +1,15 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem 0.5rem 3rem;
+    background-color: var(--golden);
+}
+
+.links-routes {
+    transition: all ease-in-out 100ms;
+}
+
+.links-routes:hover {
+    color: white;
+}

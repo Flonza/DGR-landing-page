@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Poppins", serif;
+
+  --smooth-black: #414141;
+  --brown: #794E35;
+  --deep-black: #010101;
+  --golden: #DBA815;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* TITULOS */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; 
+  font-size: 18px;
+}
+
+header {
+  width: 100%;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background: var(--golden);
+  color: white;
+  text-align: center;
+}
+
