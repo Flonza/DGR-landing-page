@@ -35,6 +35,12 @@ export function NavBar() {
 
 
                 <div className="menuToggle md:hidden block w-full relative z-10">
+
+                    <div className="img-ctn">
+                        <img src='/Company/Logo.webp' alt="Logo" className="h-[30px]" />
+                    </div>
+                    
+
                     <input type="checkbox" id="checkbox" />
                     <label htmlFor="checkbox" className="toggle">
                         <div className="bar bar--top"></div>
