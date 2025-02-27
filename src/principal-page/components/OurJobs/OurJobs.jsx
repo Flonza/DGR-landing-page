@@ -3,6 +3,7 @@ import Job2 from '/Activities/AllJobs/Job-2.webp';
 import Job3 from '/Activities/AllJobs/Job-3.webp';
 import Job4 from '/Activities/AllJobs/Job-4.webp';
 import WhatsappButton from '../../../components/WhatsappButton/WhatsappButton';
+import Carousel from '../../../components/Carousel/Carousel';
 
 export default function OurJobs() {
     const images = [
@@ -10,13 +11,11 @@ export default function OurJobs() {
         '/Clients/Globalem.webp',
         '/Clients/SunVillage.webp',
         '/Clients/CascadasDePapa.webp',
-    ]
-
-    const imges2 = [
         '/Clients/Cadavid.webp',
         '/Clients/Ventolini.webp',
-        '/Clients/ReservaDeRioCairo.webp',
+        '/Clients/ReservaDeRioCairo.webp'
     ]
+
 
     return (
         <article className="p-12 mt-10">
@@ -69,28 +68,8 @@ export default function OurJobs() {
                 ALGUNOS DE NUESTROS CLIENTES EMPRESAS
             </h2>
 
-                <div className="flex gap-y-4 flex-wrap">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 place-items-center w-full md:gap-y-4">
-                        {images.map((logo, index) => (
-                            <img
-                                key={index}
-                                src={logo}
-                                alt={`Cliente ${index + 1}`}
-                                className="w-40 h-24 object-contain"
-                            />
-                        ))}
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center mt-4 w-full md:gap-y-4">
-                        {imges2.map((logo, index) => (
-                            <img
-                                key={index}
-                                src={logo}
-                                alt={`Cliente ${index + 5}`}
-                                className="w-40 h-24 object-contain"
-                            />
-                        ))}
-                    </div>
+                <div className="">
+                <Carousel images={images} />
                 </div>
             </section>
 

@@ -34,3 +34,138 @@ footer {
   text-align: center;
 }
 
+
+/* Contenedor principal del carrusel */
+.glide-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Estilos para cada slide */
+.client-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.client-slide:hover {
+  transform: translateY(-5px);
+}
+
+.client-image {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.client-slide:hover .client-image {
+  transform: scale(1.05);
+}
+
+::ng-deep .glide__bullet {
+  background-color: #ccc !important;
+}
+
+/* Estilos para las flechas de navegación */
+.glide__arrow {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.glide__arrow:hover,
+.glide__arrow:focus {
+  background-color: #f5f5f5;
+  outline: none;
+}
+
+/* Bullets de navegación */
+.glide__bullets {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position: relative !important;
+  top: 0px;
+}
+
+.glide__bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc !important;
+  border-radius: 50%;
+  transition: all 300ms ease !important;
+}
+
+.glide__bullet:hover,
+.glide__bullet:focus,
+.glide__bullet--active {
+  transform: scale(1.3);
+  outline: none;
+  background-color: oklch(0.666 0.179 58.318) !important;
+}
+
+/* Responsive Design */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .glide-wrapper {
+    padding: 30px 15px;
+  }
+  .client-slide {
+    height: 130px;
+    padding: 15px;
+  }
+}
+
+/* Dispositivos móviles */
+@media (max-width: 768px) {
+  .glide-wrapper {
+    padding: 20px 10px;
+  }
+  .client-slide {
+    height: 120px;
+    padding: 12px;
+  }
+  .client-image {
+    max-height: 80px;
+  }
+  .glide__arrow {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 548px) {
+  .glide-wrapper {
+    padding: 15px 5px;
+  }
+  .client-slide {
+    height: 100px;
+    padding: 10px;
+  }
+  .client-image {
+    max-height: 70px;
+  }
+  .glide__arrow {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+:host ::ng-deep {
+  
+}
